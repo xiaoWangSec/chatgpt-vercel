@@ -1,4 +1,5 @@
 import { toBlob, toJpeg } from "html-to-image"
+import ThemeToggle from "../ThemeToggle"
 import { Match, Show, Switch, type JSXElement } from "solid-js"
 import { createStore } from "solid-js/store"
 import { defaultEnv } from "~/env"
@@ -224,6 +225,9 @@ export default function SettingAction() {
             icon="i-carbon:settings-services"
             label="对话设置"
           />
+
+        <ThemeToggle />
+        
         </div>
         <Switch
           fallback={
