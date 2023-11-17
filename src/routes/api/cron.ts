@@ -8,18 +8,13 @@ const channel = isNaN(+process.env.SEND_CHANNEL!)
 
 export const config = {
   runtime: "edge",
-  /**
-   * https://vercel.com/docs/concepts/edge-network/regions#region-list
-   * disable hongkong
-   * only for vercel
-   */
   regions: [
     "arn1",
     "bom1",
     "bru1",
     "cdg1",
     "cle1",
-    "cpt1a",
+    "cpt1",
     "dub1",
     "fra1",
     "gru1",
@@ -32,10 +27,9 @@ export const config = {
     "sfo1",
     "sin1",
     "syd1"
-  ],
-  preferredRegion: ['arn1', 'bom1', 'cdg1', 'cle1', 'cpt1', 'dub1', 'fra1', 'gru1', 'hnd1', 'iad1', 'icn1', 'kix1', 'lhr1', 'pdx1', 'sfo1', 'sin1', 'syd1']
+  ]
 }
-export const preferredRegion = ['arn1', 'bom1', 'cdg1', 'cle1', 'cpt1', 'dub1', 'fra1', 'gru1', 'hnd1', 'iad1', 'icn1', 'kix1', 'lhr1', 'pdx1', 'sfo1', 'sin1', 'syd1'];
+
 export async function GET() {
   try {
     const keys = Array.from(new Set(splitKeys(localKey)))
